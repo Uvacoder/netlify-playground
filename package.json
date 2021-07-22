@@ -7,6 +7,10 @@
         "type": "git",
         "url": "git+https://github.com/zapscribbles/11ty-boilerplate.git"
     },
+    "scripts": {
+        "start": "browserify entry.js -o src/common-js/bundle.js & eleventy --serve & postcss src/styles/tailwind.css --o _tmp/style.css --watch",
+        "build": "browserify entry.js -o src/common-js/bundle.js & eleventy & postcss src/styles/tailwind.css --o _site/css/style.css"
+    },
     "author": "Stephen Zappia",
     "license": "ISC",
     "bugs": {
